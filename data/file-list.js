@@ -1,1 +1,0 @@
-module.exports = ["./js/a-demo-file.js","./js/another-demo-file.js"]

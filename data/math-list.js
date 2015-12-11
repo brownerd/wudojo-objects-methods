@@ -1,0 +1,21 @@
+module.exports = [
+  "./js/01-Math.PI.js",
+  "./js/02-Math.abs.js",
+  "./js/03-Math.acos.js",
+  "./js/04-Math.asin.js",
+  "./js/05-Math.atan.js",
+  "./js/06-Math.atan2.js",
+  "./js/07-Math.ceil.js",
+  "./js/08-Math.cos.js",
+  "./js/09-Math.exp.js",
+  "./js/10-Math.floor.js",
+  "./js/11-Math.log.js",
+  "./js/12-Math.max.js",
+  "./js/13-Math.min.js",
+  "./js/14-Math.pow.js",
+  "./js/15-Math.random.js",
+  "./js/16-Math.round.js",
+  "./js/17-Math.sin.js",
+  "./js/18-Math.sqrt.js",
+  "./js/19-Math.tan.js"
+]

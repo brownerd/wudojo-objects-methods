@@ -5,14 +5,14 @@ import fs from 'fs'
 function jsFiles(path, outFilename, cb) {
   fs.readdir(path, function(err, files) {
 
-    const files = []
+    var files = []
 
     // Check for js files and push on the array if it's a match.
     fs.readdirSync(path).forEach(function (file) {
       file.substr(-2).match(/js/) && files.push(`./js/${file}`)
     })
 
-    fs.writeFile(__dirname + '/data/' + outFilename, 'module.exports = ' + JSON.stringify( files ), function(err) {
+    fs.writeFile(__dirname + '/data/' + outFilename, 'module.exports = ' + JSON.stringify( files, null, 2 ), function(err) {
       if (err) throw err
       cb && cb('Dunzo.')
     })
