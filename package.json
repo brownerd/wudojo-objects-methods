@@ -4,15 +4,46 @@
   "description": "unit testing common scenarios with tape",
   "main": "index.js",
   "scripts": {
+
     "build": "webpack",
+
     "cov": "npm run cov:clean && npm run cov:generate",
+
     "cov:clean": "rimraf coverage",
+
     "cov:generate": "babel-node node_modules/.bin/isparta cover --report text --report html test/index.js",
+
     "cover-unused": "babel-node node_modules/.bin/isparta cover --report text --report html ./test/*_tape.js",
+
     "dev": "watch 'clear && npm run -s lint && npm -s test' src test",
     "lint": "eslint src test",
-    "start": "babel-node file-lister.js && webpack-dev-server --inline --hot --config webpack.config.js -f",
+
+    "lister": "babel-node file-lister.js",
+
+    "start": "webpack-dev-server --inline --hot --config webpack.config.babel.js",
+
+    "arrayz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D arrayz -F",
+
+    "datez": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D datez -F",
+
+    "domz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D domz -F",
+
+    "functionz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D functionz -F",
+
+    "jsonz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D jsonz -F",
+
+    "mathz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D mathz -F",
+
+    "objectz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D objectz -F",
+
+    "regexz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D regexz -F",
+
+    "stringz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D stringz -F",
+
+    "otherz": "webpack-dev-server --inline --hot --config webpack.config.babel.js -D otherz -F",
+
     "test": "babel-node ./test/index.js | faucet",
+
     "validate": "npm outdated --depth 0"
   },
   "author": "Marco Romero",
