@@ -1,2 +1,3 @@
-require('./doge-clicker_tape')
-require('./math_tape')
+// Require all test here in one place
+
+require('./strings_tape.js')

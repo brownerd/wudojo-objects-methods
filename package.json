@@ -15,7 +15,8 @@
 
     "cover-unused": "babel-node node_modules/.bin/isparta cover --report text --report html ./test/*_tape.js",
 
-    "dev": "watch 'clear && npm run -s lint && npm -s test' src test",
+    "lintest": "watch 'clear && npm run -s lint && npm -s test' js test",
+
     "lint": "eslint src test",
 
     "lister": "babel-node file-lister.js",

@@ -14,6 +14,7 @@ import mathz from './data/math-list'
 import objectz from './data/objects-list'
 import regexz from './data/regex-list'
 import stringz from './data/strings-list'
+import otherz from './data/other-list'
 
 const entry = {
   arrayz: arrayz,

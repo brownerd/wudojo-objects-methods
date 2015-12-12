@@ -24,6 +24,10 @@ Just trying to learn about the standard built-in objects and their methods. I ha
 
 `npm run stringz -F 1`
 
+## Linting and Testing
+
+`npm run lintest`
+
 
 ## Arrays
 
