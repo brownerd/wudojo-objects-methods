@@ -4,6 +4,7 @@ import {fromCharCd} from '../js/strings/02-String.fromCharCode.js'
 import {fromCodePt} from '../js/strings/03-String.fromCodePoint.js'
 import {anchorMaker} from '../js/strings/04-String.prototype.anchor.js'
 import {charAT} from '../js/strings/05-String.prototype.charAt'
+import {charCodeAT} from '../js/strings/06-String.prototype.charCodeAt'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -48,6 +49,15 @@ test('charAT() should return the letter at the specified index', assert => {
   const expected = 'A'
   assert.equal(actual, expected,
     `charAT() should return ${expected}`)
+  assert.end()
+})
+
+// CharCodeAt
+test('charCodeAT() should return charCode from specified index of string', assert => {
+  const actual = charCodeAT('RAD', 1)
+  const expected = 65
+  assert.equals(actual, expected,
+    'charCodeAT(RAD, 1) should equal 65')
   assert.end()
 })
 
