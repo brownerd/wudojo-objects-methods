@@ -2,7 +2,7 @@ import test from 'tape'
 import {len} from '../js/strings/01-String.length.js'
 import {fromCharCd} from '../js/strings/02-String.fromCharCode.js'
 import {fromCodePt} from '../js/strings/03-String.fromCodePoint.js'
-
+import {anchorMaker} from '../js/strings/04-String.prototype.anchor.js'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -32,7 +32,28 @@ test('fromCodePt() should return a string created by using the specified sequenc
   assert.end()
 })
 
+// Anchor
+test('anchorMaker() creates an anchor tag', assert => {
+  const actual = anchorMaker('anchorize me', 'anchor_name')
+  const expected = '<a name="anchor_name">anchorize me</a>'
+  assert.equal(actual, expected,
+    `anchorMaker('anchorize me', 'anchor_name') should equal ${expected}`)
+  assert.end()
+})
+
 /*
+
+// Boilerplate
+
+test('wat it do', assert => {
+  const actual =
+  const expected =
+  assert.equal(actual, expected,
+    ``)
+  assert.end()
+})
+
+
 // For each unit test you write
 // answer these questions
 
