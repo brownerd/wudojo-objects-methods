@@ -1,10 +1,11 @@
 import test from 'tape'
-import {len} from '../js/strings/01-String.length.js'
-import {fromCharCd} from '../js/strings/02-String.fromCharCode.js'
-import {fromCodePt} from '../js/strings/03-String.fromCodePoint.js'
-import {anchorMaker} from '../js/strings/04-String.prototype.anchor.js'
+import {len} from '../js/strings/01-String.length'
+import {fromCharCd} from '../js/strings/02-String.fromCharCode'
+import {fromCodePt} from '../js/strings/03-String.fromCodePoint'
+import {anchorMaker} from '../js/strings/04-String.prototype.anchor'
 import {charAT} from '../js/strings/05-String.prototype.charAt'
 import {charCodeAT} from '../js/strings/06-String.prototype.charCodeAt'
+import {codePointAT} from '../js/strings/07-String.prototype.codePointAt'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -58,6 +59,15 @@ test('charCodeAT() should return charCode from specified index of string', asser
   const expected = 65
   assert.equals(actual, expected,
     'charCodeAT(RAD, 1) should equal 65')
+  assert.end()
+})
+
+// codePointAt
+test('codePointAT() should return charCode from specified index of string', assert => {
+  const actual = codePointAT('RAD', 1)
+  const expected = 65
+  assert.equals(actual, expected,
+    'codePointAT(RAD, 1) should equal 65')
   assert.end()
 })
 
