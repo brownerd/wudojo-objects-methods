@@ -6,6 +6,7 @@ import {anchorMaker} from '../js/strings/04-String.prototype.anchor'
 import {charAT} from '../js/strings/05-String.prototype.charAt'
 import {charCodeAT} from '../js/strings/06-String.prototype.charCodeAt'
 import {codePointAT} from '../js/strings/07-String.prototype.codePointAt'
+import {concaT} from '../js/strings/08-String.prototype.concat'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -68,6 +69,15 @@ test('codePointAT() should return charCode from specified index of string', asse
   const expected = 65
   assert.equals(actual, expected,
     'codePointAT(RAD, 1) should equal 65')
+  assert.end()
+})
+
+// Concat
+test('concaT() concatenates to strings', assert => {
+  const actual = concaT('Super', 'RAD')
+  const expected = 'SuperRAD'
+  assert.equal(actual, expected,
+    `concaT() should equal ${expected}`)
   assert.end()
 })
 
