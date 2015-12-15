@@ -16,6 +16,7 @@ import {localeCompareFN} from '../js/strings/14-String.prototype.localeCompare'
 import {matchFN} from '../js/strings/15-String.prototype.match'
 import {repeatFN} from '../js/strings/17-String.prototype.repeat'
 import {replaceFN, replacer} from '../js/strings/18-String.prototype.replace'
+import {searchFN} from '../js/strings/19-String.prototype.search'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -256,6 +257,30 @@ test('replacer() will reorder sting', assert => {
   const actual = replaceFN('abc12345#$*%', /([^\d]*)(\d*)([^\w]*)/, replacer)
   const expected = 'abc - 12345 - #$*%'
   assert.equal(actual, expected, `Should return p1 is nondigits, p2 digits, and p3 non-alphanumerics and format it: ${expected}`)
+  assert.end()
+})
+
+test('1 searchFN() search string for specified string', assert => {
+  const actual = searchFN('fucking RAD rad maing!', /rad/)
+  const expected = 12
+  assert.equal(actual, expected,
+    `searchFN() should return rad at index: ${expected}`)
+  assert.end()
+})
+
+test('2 searchFN() search string for specified string', assert => {
+  const actual = searchFN('fucking RAD rad maing!', /rad/i)
+  const expected = 8
+  assert.equal(actual, expected,
+    `searchFN() should return RAD at index: ${expected}`)
+  assert.end()
+})
+
+test('3 searchFN() search string for specified string', assert => {
+  const actual = searchFN('fucking RAD maing!', /awesome/)
+  const expected = -1
+  assert.equal(actual, expected,
+    `searchFN() should return ${expected} because search term cannot be found`)
   assert.end()
 })
 
