@@ -8,6 +8,7 @@ import {charCodeAT} from '../js/strings/06-String.prototype.charCodeAt'
 import {codePointAT} from '../js/strings/07-String.prototype.codePointAt'
 import {concaT} from '../js/strings/08-String.prototype.concat'
 import {endsWITH} from '../js/strings/09-String.prototype.endsWith'
+import {includez} from '../js/strings/10-String.prototype.includes'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -111,6 +112,13 @@ test('endsWith function should find the word at the end of the string', assert =
 
   // Could use assert.ok() here
   assert.equal(actual, expected, `endsWITH(RAD, Hell yeah) should equal ${expected}`)
+  assert.end()
+})
+
+test('includez() function tests if a sting IS in a string', assert => {
+  const actual = includez('Rad, Hell yeah!', 'Hell')
+  const expected = true
+  assert.equal(actual, expected, `includez() should be ${expected}`)
   assert.end()
 })
 

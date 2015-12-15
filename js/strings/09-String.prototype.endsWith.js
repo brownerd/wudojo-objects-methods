@@ -5,3 +5,5 @@
 
 // ES6
 export const endsWITH = (str1, str2) => str1.endsWith(str2)
+
+// You can also include and index to test if a string is at that index
