@@ -18,6 +18,7 @@ import {repeatFN} from '../js/strings/17-String.prototype.repeat'
 import {replaceFN, replacer} from '../js/strings/18-String.prototype.replace'
 import {searchFN} from '../js/strings/19-String.prototype.search'
 import {sliceFN} from '../js/strings/20-String.prototype.slice'
+import {splitFN} from '../js/strings/21-String.prototype.split'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -317,6 +318,22 @@ test('4 sliceFN() returns slice', assert => {
   const expected = 'this is totally crazy!'
   assert.equal(actual, expected,
     `sliceFN() should return ${expected}`)
+  assert.end()
+})
+
+test('1 splitFN() should split string into an array at the identified splits for as long as the index indicates', assert => {
+  const actual = splitFN('This is a crazy time to learn JS', ' ')
+  const expected = ['This', 'is', 'a', 'crazy', 'time', 'to', 'learn', 'JS']
+  assert.deepEqual(actual, expected,
+    `splitFN() should equal ${expected}`)
+  assert.end()
+})
+
+test('2 splitFN() should split string into an array at the identified splits for as long as the index indicates', assert => {
+  const actual = splitFN('This is a crazy time to learn JS', ' ', 5)
+  const expected = ['This', 'is', 'a', 'crazy', 'time']
+  assert.deepEqual(actual, expected,
+    `splitFN() should equal ${expected}`)
   assert.end()
 })
 
