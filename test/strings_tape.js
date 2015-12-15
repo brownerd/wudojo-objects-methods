@@ -11,6 +11,7 @@ import {endsWITH} from '../js/strings/09-String.prototype.endsWith'
 import {includez} from '../js/strings/10-String.prototype.includes'
 import {indexOF} from '../js/strings/11-String.prototype.indexOf'
 import {lastIndexOF} from '../js/strings/12-String.prototype.lastIndexOf'
+import {linK} from '../js/strings/13-String.prototype.link'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -180,6 +181,14 @@ test('5 indicates the last index of the occurance of the searchTerm is not at in
   assert.equal(actual, expected, `lastIndexOF should find the last occurance of l at index ${expected}`)
   assert.end()
 })
+
+test('linK() returns a propper html link', assert => {
+  const actual = linK('linkText', 'http://url.com')
+  const expected = '<a href="http://url.com/">linkText</a>'
+  assert.equal(actual, expected, ` ${expected}`)
+  assert.end()
+})
+
 /*
 
 // Boilerplate
