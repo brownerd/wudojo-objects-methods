@@ -9,6 +9,7 @@ import {codePointAT} from '../js/strings/07-String.prototype.codePointAt'
 import {concaT} from '../js/strings/08-String.prototype.concat'
 import {endsWITH} from '../js/strings/09-String.prototype.endsWith'
 import {includez} from '../js/strings/10-String.prototype.includes'
+import {indexOF} from '../js/strings/11-String.prototype.indexOf'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -119,6 +120,27 @@ test('includez() function tests if a sting IS in a string', assert => {
   const actual = includez('Rad, Hell yeah!', 'Hell')
   const expected = true
   assert.equal(actual, expected, `includez() should be ${expected}`)
+  assert.end()
+})
+
+test('1 indexOF() test will indicate the character index where the searchTerm begins', assert => {
+  const actual = indexOF('Oh hell yeah', 'hell')
+  const expected = 3
+  assert.equal(actual, expected, `indexOF() should be ${expected}`)
+  assert.end()
+})
+
+test('2 indexOF() tests if a searchTerm is not in a string', assert => {
+  const actual = indexOF('Oh hell yeah', 'RAD')
+  const expected = -1
+  assert.equal(actual, expected, `indexOF() should be ${expected}`)
+  assert.end()
+})
+
+test('3 indexOF() tests if a searchTerm is at the specified index of the string', assert => {
+  const actual = indexOF('Oh hell yeah', 'yeah', 8)
+  const expected = 8
+  assert.equal(actual, expected, `indexOF() should be ${expected}`)
   assert.end()
 })
 
