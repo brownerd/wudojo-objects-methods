@@ -13,6 +13,7 @@ import {indexOF} from '../js/strings/11-String.prototype.indexOf'
 import {lastIndexOF} from '../js/strings/12-String.prototype.lastIndexOf'
 import {linK} from '../js/strings/13-String.prototype.link'
 import {localeCompareFN} from '../js/strings/14-String.prototype.localeCompare'
+import {matchFN} from '../js/strings/15-String.prototype.match'
 
 
 // Length
@@ -187,21 +188,41 @@ test('5 indicates the last index of the occurance of the searchTerm is not at in
 test('linK() returns a propper html link', assert => {
   const actual = linK('linkText', 'http://url.com')
   const expected = '<a href="http://url.com/">linkText</a>'
-  assert.equal(actual, expected, ` ${expected}`)
+  assert.equal(actual, expected, `link() should return this propper link: ${expected}`)
   assert.end()
 })
 
 test('1 localeCompareFN() tests two strings and indicates which one comes first alphabetically', assert => {
   const actual = localeCompareFN('alpha', 'beta')
   const expected = -1 || -2
-  assert.equal(actual, expected, `localeCompareFN returns ${expected}`)
+  assert.equal(actual, expected,
+    `localeCompareFN returns ${expected}`)
   assert.end()
 })
 
 test('2 localeCompareFN() tests two strings and indicates which one comes first alphabetically', assert => {
   const actual = localeCompareFN('beta', 'alpha')
   const expected = 1 || 2
-  assert.equal(actual, expected, `localeCompareFN returns ${expected}`)
+  assert.equal(actual, expected,
+    `localeCompareFN returns ${expected}`)
+  assert.end()
+})
+
+// Must include the flag or else it doesn't work, even though it looks like it does. If the regular expression does not include the g flag, returns the same result as RegExp.exec(). The returned Array has an extra input property, which contains the original string that was parsed. In addition, it has an index property, which represents the zero-based index of the match in the string.
+
+test('1 matchFN() should match pattern', assert => {
+  const actual = matchFN('This is RAD', /RAD/gi)
+  const expected = ['RAD']
+  assert.deepEqual(actual, expected,
+    `matchFN() should match ${expected}`)
+  assert.end()
+})
+
+test('2 matchFN() should match pattern', assert => {
+  const actual = matchFN('This is RAD', /(rad)/gi)
+  const expected = ['RAD']
+  assert.deepEqual(actual, expected,
+    `matchFN() should match ${expected}`)
   assert.end()
 })
 
