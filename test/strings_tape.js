@@ -14,7 +14,7 @@ import {lastIndexOF} from '../js/strings/12-String.prototype.lastIndexOf'
 import {linK} from '../js/strings/13-String.prototype.link'
 import {localeCompareFN} from '../js/strings/14-String.prototype.localeCompare'
 import {matchFN} from '../js/strings/15-String.prototype.match'
-
+import {repeatFN} from '../js/strings/17-String.prototype.repeat'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -223,6 +223,14 @@ test('2 matchFN() should match pattern', assert => {
   const expected = ['RAD']
   assert.deepEqual(actual, expected,
     `matchFN() should match ${expected}`)
+  assert.end()
+})
+
+test('repeatFN() will repeat the string and contatenate it', assert => {
+  const actual = repeatFN('RAD', 3)
+  const expected = 'RADRADRAD'
+  assert.equal(actual, expected,
+    `repeatFN() should return ${expected}`)
   assert.end()
 })
 
