@@ -1,1 +1,28 @@
+// String.prototype.slice
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+
+
+/*
+  beginSlice
+
+  The zero-based index at which to begin extraction. If negative, it is treated as sourceLength + beginSlice where sourceLength is the length of the string (for example, if beginSlice is -3 it is treated as sourceLength - 3).
+
+  endSlice
+
+  Optional. The zero-based index at which to end extraction. If omitted, slice() extracts to the end of the string. If negative, it is treated as sourceLength + endSlice where sourceLength is the length of the string (for example, if endSlice is -3 it is treated as sourceLength - 3).
+
+  Description
+
+  slice() extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.
+
+  slice() extracts up to but not including endSlice. str.slice(1, 4) extracts the second character through the fourth character (characters indexed 1, 2, and 3).
+
+  As an example, str.slice(2, -1) extracts the third character through the second to last character in the string.
+ */
+
+export const sliceFN = (str, beginSlice, endSlice) => str.slice(beginSlice, endSlice)
+
+
+
+
 // http://thenewcode.com/281/Manipulating-JavaScript-Strings-with-Split-and-Slice

@@ -17,6 +17,7 @@ import {matchFN} from '../js/strings/15-String.prototype.match'
 import {repeatFN} from '../js/strings/17-String.prototype.repeat'
 import {replaceFN, replacer} from '../js/strings/18-String.prototype.replace'
 import {searchFN} from '../js/strings/19-String.prototype.search'
+import {sliceFN} from '../js/strings/20-String.prototype.slice'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -281,6 +282,41 @@ test('3 searchFN() search string for specified string', assert => {
   const expected = -1
   assert.equal(actual, expected,
     `searchFN() should return ${expected} because search term cannot be found`)
+  assert.end()
+})
+
+test('1 sliceFN() returns slice', assert => {
+  const actual = sliceFN('OMG, this is totally crazy!', 0)
+  const expected = 'OMG, this is totally crazy!'
+  assert.equal(actual, expected,
+    `sliceFN() should return ${expected}`)
+  assert.end()
+})
+
+// Doesn't Include character of the endSlice index
+test('2 sliceFN() returns slice', assert => {
+  const actual = sliceFN('OMG, this is totally crazy!', 0, 3)
+  const expected = 'OMG'
+  assert.equal(actual, expected,
+    `sliceFN() should return ${expected}`)
+  assert.end()
+})
+
+// Doesn't Include character of the endSlice index
+test('3 sliceFN() returns slice', assert => {
+  const actual = sliceFN('OMG, this is totally crazy!', -6)
+  const expected = 'crazy!'
+  assert.equal(actual, expected,
+    `sliceFN() should return ${expected}`)
+  assert.end()
+})
+
+// Doesn't Include character of the endSlice index
+test('4 sliceFN() returns slice', assert => {
+  const actual = sliceFN('OMG, this is totally crazy!', 5)
+  const expected = 'this is totally crazy!'
+  assert.equal(actual, expected,
+    `sliceFN() should return ${expected}`)
   assert.end()
 })
 
