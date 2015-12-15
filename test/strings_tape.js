@@ -10,6 +10,7 @@ import {concaT} from '../js/strings/08-String.prototype.concat'
 import {endsWITH} from '../js/strings/09-String.prototype.endsWith'
 import {includez} from '../js/strings/10-String.prototype.includes'
 import {indexOF} from '../js/strings/11-String.prototype.indexOf'
+import {lastIndexOF} from '../js/strings/12-String.prototype.lastIndexOf'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -144,6 +145,41 @@ test('3 indexOF() tests if a searchTerm is at the specified index of the string'
   assert.end()
 })
 
+//
+test('1 lastIndexOF() indicates the last index of the occurance of the searchTerm', assert => {
+  const actual = lastIndexOF('Oh, hell yeah!', 'yeah!')
+  const expected = 9
+  assert.equal(actual, expected, `lastIndexOF should be ${expected}`)
+  assert.end()
+})
+
+test('2 lastIndexOF() indicates the last index of the occurance of the searchTerm', assert => {
+  const actual = lastIndexOF('Oh, hell yeah!', 'yeah!', 9)
+  const expected = 9
+  assert.equal(actual, expected, `lastIndexOF should find the last occurance of yeah! at index ${expected}`)
+  assert.end()
+})
+
+test('3 indicates the last index of the occurance of the searchTerm is at index 7', assert => {
+  const actual = lastIndexOF('Oh, hell yeah!', 'l', 7)
+  const expected = 7
+  assert.equal(actual, expected, `lastIndexOF should find the last occurance of l at index ${expected}`)
+  assert.end()
+})
+
+test('4 indicates the last index of the occurance of the searchTerm is also at index 6', assert => {
+  const actual = lastIndexOF('Oh, hell yeah!', 'l', 6)
+  const expected = 6
+  assert.equal(actual, expected, `lastIndexOF should find the last occurance of l at index ${expected}`)
+  assert.end()
+})
+
+test('5 indicates the last index of the occurance of the searchTerm is not at index 6', assert => {
+  const actual = lastIndexOF('Oh, hell yeah!', 'l', 5)
+  const expected = -1
+  assert.equal(actual, expected, `lastIndexOF should find the last occurance of l at index ${expected}`)
+  assert.end()
+})
 /*
 
 // Boilerplate
