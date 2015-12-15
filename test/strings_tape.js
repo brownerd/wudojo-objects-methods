@@ -15,6 +15,7 @@ import {linK} from '../js/strings/13-String.prototype.link'
 import {localeCompareFN} from '../js/strings/14-String.prototype.localeCompare'
 import {matchFN} from '../js/strings/15-String.prototype.match'
 import {repeatFN} from '../js/strings/17-String.prototype.repeat'
+import {replaceFN, replacer} from '../js/strings/18-String.prototype.replace'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -234,6 +235,29 @@ test('repeatFN() will repeat the string and contatenate it', assert => {
   assert.end()
 })
 
+test('replaceFN() will replace specified string', assert => {
+  const actual = replaceFN('Hell yay!', /yay/, 'yeah')
+  const expected = 'Hell yeah!'
+  assert.equal(actual, expected,
+    `replaceFN() should return ${expected}`)
+  assert.end()
+})
+
+test('replaceFN() will replace specified string', assert => {
+  const actual = replaceFN('Hell yeah!', /(\w+)\s(\w+)/, '$2 $1')
+  const expected = 'yeah Hell!'
+  assert.equal(actual, expected,
+    `replaceFN() should return ${expected}`)
+  assert.end()
+})
+
+// Should
+test('replacer() will reorder sting', assert => {
+  const actual = replaceFN('abc12345#$*%', /([^\d]*)(\d*)([^\w]*)/, replacer)
+  const expected = 'abc - 12345 - #$*%'
+  assert.equal(actual, expected, `Should return p1 is nondigits, p2 digits, and p3 non-alphanumerics and format it: ${expected}`)
+  assert.end()
+})
 
 /*
 
