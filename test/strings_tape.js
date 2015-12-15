@@ -12,6 +12,8 @@ import {includez} from '../js/strings/10-String.prototype.includes'
 import {indexOF} from '../js/strings/11-String.prototype.indexOf'
 import {lastIndexOF} from '../js/strings/12-String.prototype.lastIndexOf'
 import {linK} from '../js/strings/13-String.prototype.link'
+import {localeCompareFN} from '../js/strings/14-String.prototype.localeCompare'
+
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -188,6 +190,21 @@ test('linK() returns a propper html link', assert => {
   assert.equal(actual, expected, ` ${expected}`)
   assert.end()
 })
+
+test('1 localeCompareFN() tests two strings and indicates which one comes first alphabetically', assert => {
+  const actual = localeCompareFN('alpha', 'beta')
+  const expected = -1 || -2
+  assert.equal(actual, expected, `localeCompareFN returns ${expected}`)
+  assert.end()
+})
+
+test('2 localeCompareFN() tests two strings and indicates which one comes first alphabetically', assert => {
+  const actual = localeCompareFN('beta', 'alpha')
+  const expected = 1 || 2
+  assert.equal(actual, expected, `localeCompareFN returns ${expected}`)
+  assert.end()
+})
+
 
 /*
 
