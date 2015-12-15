@@ -104,10 +104,12 @@ test('concaT() concatenates to strings', assert => {
   assert.end()
 })
 
-// EndsWith
-test('endsWith function should concatenate 2 strings', assert => {
-  const actual = endsWITH('RAD', 'Hell yeah')
-  const expected = ''
+// EndsWith (boolean)
+test('endsWith function should find the word at the end of the string', assert => {
+  const actual = endsWITH('RAD, Hell yeah!', 'yeah!')
+  const expected = true
+
+  // Could use assert.ok() here
   assert.equal(actual, expected, `endsWITH(RAD, Hell yeah) should equal ${expected}`)
   assert.end()
 })
