@@ -2,6 +2,8 @@
 
 Just trying to learn about the standard built-in objects and their methods. I have this repo set up to run, test and practice various methods quickly. I will do TDD while trying to learn these.
 
+Each file in the JS directory IS largely (almost entirly) a copy of info from Mozilla's docs. But writing code goes further than reading code. Gotta learn all this shit somehow.
+
 
 ## Linting and Testing
 
@@ -15,7 +17,8 @@ Just trying to learn about the standard built-in objects and their methods. I ha
 **Array.from()**
 [ECMAScript.next: Array.from() and Array.of()](http://www.2ality.com/2011/07/array-from.html)
 
-
+**.every()**
+- [The Array native every(), filter(), map(), some(), forEach() methods](https://coderwall.com/p/_ggh2w/the-array-native-every-filter-map-some-foreach-methods) Super helpful
 
 
 #### Date

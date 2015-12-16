@@ -4,6 +4,8 @@ import {fromArgs, fromStr, fromDouble, fromSeqGen} from '../js/arrays/02-Array.f
 import {isArrayFN} from '../js/arrays/03-Array.isArray'
 import {ofFN} from '../js/arrays/05-Array.of'
 import {concatFN, concat2FN} from '../js/arrays/06-Array.prototype.concat'
+import {entryFN} from '../js/arrays/08-Array.prototype.entries'
+import {every10FN} from '../js/arrays/09-Array.prototype.every'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -79,6 +81,21 @@ test('concat2FN() can concatenate multiple arrays', assert => {
   const actual = concatFN([1, 2], ['a', 'b'])
   const expected = [1, 2, 'a', 'b']
   assert.deepEqual(actual, expected, `concatFN() should concatenate multiple arrays into: ${expected}`)
+  assert.end()
+})
+
+// This is Janky. Don't use it.
+test('entryFN() does something', assert => {
+  const actual = entryFN(['a', 'b'])
+  const expected = {}
+  assert.deepEqual(actual, expected, ` ${expected}`)
+  assert.end()
+})
+
+test('every10FN() will test all the items in an array', assert => {
+  const actual = every10FN([10, 25, 44, 11])
+  const expected = true
+  assert.equal(actual, expected, `every10FN() will return ${expected}`)
   assert.end()
 })
 
