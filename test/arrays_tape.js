@@ -68,6 +68,12 @@ test('ofFN() array maker', assert => {
   assert.end()
 })
 
+test('concatFN() can concatenate multiple arrays', assert => {
+  const actual = concatFN([1, 2], [3, 4], ['a', 'b', 'c'])
+  const expected = [1, 2, 3, 4, 'a', 'b', 'c']
+  assert.deepEqual(actual, expected, `concatFN() should concatenate multiple arrays into: ${expected}`)
+  assert.end()
+})
 /*
 // For each unit test you write
 // answer these questions
