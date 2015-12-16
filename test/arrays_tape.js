@@ -7,6 +7,7 @@ import {concatFN, concat2FN} from '../js/arrays/06-Array.prototype.concat'
 import {entryFN} from '../js/arrays/08-Array.prototype.entries'
 import {every10FN} from '../js/arrays/09-Array.prototype.every'
 import {filterODD, filterEven, filterGreater} from '../js/arrays/11-Array.prototype.filter'
+import {findGreater} from '../js/arrays/12-Array.prototype.find'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -126,6 +127,12 @@ test('filterGreater() test each item in a list and only returns the items that p
   assert.end()
 })
 
+test('findGreater() finds the first result of the test in an array', assert => {
+  const actual = findGreater([1, 3, 5, 8], 5)
+  const expected = 8
+  assert.equal(actual, expected, `findGreater should find first item in array greater than limit 5, which is: ${expected}`)
+  assert.end()
+})
 
 /*
 // For each unit test you write
