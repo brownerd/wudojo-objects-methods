@@ -24,6 +24,7 @@ import {substrFN} from '../js/strings/23-String.prototype.substr'
 import {substringFN} from '../js/strings/24-String.prototype.substring'
 import {toLowerCaseFN} from '../js/strings/27-String.prototype.toLowerCase'
 import {toStringFN} from '../js/strings/28-String.prototype.toString'
+import {toUpperCaseFN} from '../js/strings/29-String.prototype.toUpperCase'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -387,6 +388,14 @@ test('toStringFN should convert a value to a string', assert => {
   const expected = '123'
   assert.equal(actual, expected,
     `toStringFN should convert a value to a string: ${expected}`)
+  assert.end()
+})
+
+test('toUpperCaseFN() will uppercase a string', assert => {
+  const actual = toUpperCaseFN('rad')
+  const expected = 'RAD'
+  assert.equal(actual, expected,
+    `toUpperCaseFN should return ${expected}`)
   assert.end()
 })
 /*
