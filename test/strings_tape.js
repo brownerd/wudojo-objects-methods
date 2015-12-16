@@ -22,6 +22,7 @@ import {splitFN} from '../js/strings/21-String.prototype.split'
 import {startsWithFN} from '../js/strings/22-String.prototype.startsWith'
 import {substrFN} from '../js/strings/23-String.prototype.substr'
 import {substringFN} from '../js/strings/24-String.prototype.substring'
+import {toLowerCaseFN} from '../js/strings/27-String.prototype.toLowerCase'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -369,6 +370,14 @@ test('substringFN() will select from a startIndex and endIndex', assert => {
   const expected = ' '
   assert.equal(actual, expected,
     `substringFN() should return ${expected}`)
+  assert.end()
+})
+
+test('toLowerCaseFN() will lowercase a string', assert => {
+  const actual = toLowerCaseFN('RAD')
+  const expected = 'rad'
+  assert.equal(actual, expected,
+    `toLowerCaseFN should return ${expected}`)
   assert.end()
 })
 /*
