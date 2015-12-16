@@ -3,7 +3,7 @@ import {len} from '../js/arrays/01-Array.prototype.length'
 import {fromArgs, fromStr, fromDouble, fromSeqGen} from '../js/arrays/02-Array.from'
 import {isArrayFN} from '../js/arrays/03-Array.isArray'
 import {ofFN} from '../js/arrays/05-Array.of'
-import {concatFN} from '../js/arrays/06-Array.prototype.concat'
+import {concatFN, concat2FN} from '../js/arrays/06-Array.prototype.concat'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -74,6 +74,15 @@ test('concatFN() can concatenate multiple arrays', assert => {
   assert.deepEqual(actual, expected, `concatFN() should concatenate multiple arrays into: ${expected}`)
   assert.end()
 })
+
+test('concat2FN() can concatenate multiple arrays', assert => {
+  const actual = concatFN([1, 2], ['a', 'b'])
+  const expected = [1, 2, 'a', 'b']
+  assert.deepEqual(actual, expected, `concatFN() should concatenate multiple arrays into: ${expected}`)
+  assert.end()
+})
+
+
 /*
 // For each unit test you write
 // answer these questions

@@ -12,6 +12,10 @@ Description
 
   Strings and numbers (not String and Number objects): concat copies the values of strings and numbers into the new array.
 
-  Note: Concatenating array(s)/value(s) will leave the originals untouched. Furthermore, any operation on the new array will have no effect on the original arrays, and vice versa.*/
+  Note: Concatenating array(s)/value(s) will leave the originals untouched. Furthermore, any operation on the new array will have no effect on the original arrays, and vice versa.
+*/
 
-  export const concatFN = (...arr) => Array.concat(...arr)
+export const concatFN = (...arr) => Array.concat(...arr)
+
+// Just another way to write this
+export const concat2FN = (arr1, arr2) => arr1.concat(arr2)
