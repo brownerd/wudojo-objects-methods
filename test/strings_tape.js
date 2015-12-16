@@ -20,6 +20,7 @@ import {searchFN} from '../js/strings/19-String.prototype.search'
 import {sliceFN} from '../js/strings/20-String.prototype.slice'
 import {splitFN} from '../js/strings/21-String.prototype.split'
 import {startsWithFN} from '../js/strings/22-String.prototype.startsWith'
+import {subStrFN} from '../js/strings/23-String.prototype.substr'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -354,6 +355,13 @@ test('2 startsWithFN() function indicates if a searchTerm is at the beginning of
   assert.end()
 })
 
+test('subStrFN() will select from a start point and given length', assert => {
+  const actual = subStrFN('Hell yeah peeps', 5, 4)
+  const expected = 'yeah'
+  assert.equal(actual, expected,
+    `subStrFN should return ${expected}`)
+  assert.end()
+})
 /*
 
 // Boilerplate

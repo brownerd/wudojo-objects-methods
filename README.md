@@ -28,7 +28,7 @@ Just trying to learn about the standard built-in objects and their methods. I ha
 
 #### Strings
 
-slice(), substr() and subString() are all similar.
+**slice(), substr() and subString() are all similar**
 
 [Using Slice(), Substring(), And Substr() In Javascript](http://www.bennadel.com/blog/2159-using-slice-substring-and-substr-in-javascript.htm)
 
@@ -68,6 +68,7 @@ substr( 100, 1 ) :
 
 ```
 
+**startsWith()** uses indexOf() under the hood.
 
 #### Other
 
