@@ -64,3 +64,37 @@ Example [1]: converting an array-like DOM result into an array.
   });
 
 */
+
+/*
+A simpler way to cast the args of a function to an array
+
+  https://ponyfoo.com/articles/es6-array-extensions-in-depth
+
+  function cast ()
+    return [...arguments]
+  }
+
+  or...
+
+  function cast ()
+    return [].slice.call(arguments)
+  }
+
+
+
+
+
+  The one thing you cannot do with either Array.from nor the spread operator is to pick a start index. Suppose you wanted to pull every <div> after the first one. With .slice.call, you could do it like so:
+
+[].slice.call(document.querySelectorAll('div'), 1)
+
+
+
+
+
+Of course, there’s nothing stopping you from using .slice after casting. This is probably way easier to read, and looks more like functional programming, so there’s that.
+
+Array.from(document.querySelectorAll('div')).slice(1)
+
+
+*/

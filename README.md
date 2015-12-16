@@ -15,7 +15,10 @@ Each file in the JS directory IS largely (almost entirly) a copy of info from Mo
 #### Arrays
 
 **Array.from()**
-[ECMAScript.next: Array.from() and Array.of()](http://www.2ality.com/2011/07/array-from.html)
+- [ECMAScript.next: Array.from() and Array.of()](http://www.2ality.com/2011/07/array-from.html)
+
+- [Preparing for ECMAScript 6: New Array Methods](http://www.sitepoint.com/preparing-ecmascript-6-new-array-methods/)
+- [ES6 Array Extensions in Depth](https://ponyfoo.com/articles/es6-array-extensions-in-depth)
 
 **.every()**
 - [The Array native every(), filter(), map(), some(), forEach() methods](https://coderwall.com/p/_ggh2w/the-array-native-every-filter-map-some-foreach-methods) Super helpful

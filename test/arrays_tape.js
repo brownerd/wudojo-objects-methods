@@ -6,6 +6,7 @@ import {ofFN} from '../js/arrays/05-Array.of'
 import {concatFN, concat2FN} from '../js/arrays/06-Array.prototype.concat'
 import {entryFN} from '../js/arrays/08-Array.prototype.entries'
 import {every10FN} from '../js/arrays/09-Array.prototype.every'
+import {filterODD, filterEven, filterGreater} from '../js/arrays/11-Array.prototype.filter'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -88,14 +89,40 @@ test('concat2FN() can concatenate multiple arrays', assert => {
 test('entryFN() does something', assert => {
   const actual = entryFN(['a', 'b'])
   const expected = {}
-  assert.deepEqual(actual, expected, ` ${expected}`)
+  assert.deepEqual(actual, expected,
+    ` ${expected}`)
   assert.end()
 })
 
 test('every10FN() will test all the items in an array', assert => {
   const actual = every10FN([10, 25, 44, 11])
   const expected = true
-  assert.equal(actual, expected, `every10FN() will return ${expected}`)
+  assert.equal(actual, expected,
+    `every10FN() will return ${expected}`)
+  assert.end()
+})
+
+test('filterODD() test each item in a list and only returns the items that pass the test', assert => {
+  const actual = filterODD([1, 3, 5, 8])
+  const expected = [1, 3, 5]
+  assert.deepEqual(actual, expected,
+    `Should return odd numbers ${expected}`)
+  assert.end()
+})
+
+test('filterEven() test each item in a list and only returns the items that pass the test', assert => {
+  const actual = filterEven([1, 3, 5, 8])
+  const expected = [8]
+  assert.deepEqual(actual, expected,
+    `Should return even numbers ${expected}`)
+  assert.end()
+})
+
+test('filterGreater() test each item in a list and only returns the items that pass the test', assert => {
+  const actual = filterGreater([1, 3, 5, 8], 3)
+  const expected = [5, 8]
+  assert.deepEqual(actual, expected,
+    `Should return values greater than limint:  ${expected}`)
   assert.end()
 })
 
