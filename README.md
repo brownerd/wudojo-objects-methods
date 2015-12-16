@@ -46,6 +46,7 @@ I can't see a reason to use the substring() method. It appears to be a less-robu
 
 var numbers = "0123456789";
 
+// Begin Slice and End Slice
 slice( 3, 7 ) : 3456
 slice( -7, 7 ) : 3456
 slice( -7, -3 ) : 3456
@@ -53,6 +54,7 @@ slice( 3 ) : 3456789
 slice( -7 ) : 3456789
 slice( 100, 101 ) :
 
+//
 substring( 3, 7 ) : 3456
 substring( -7, 7 ) : 0123456
 substring( -7, -3 ) :
@@ -60,6 +62,7 @@ substring( 3 ) : 3456789
 substring( -7 ) : 0123456789
 substring( 100, 101 ) :
 
+// Start and Len. Len counts forwards from marker
 substr( 3, 4 ) : 3456
 substr( -7, 4 ) : 3456
 substr( 3 ) : 3456789

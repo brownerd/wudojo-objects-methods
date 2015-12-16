@@ -7,4 +7,4 @@
 // length
 // Optional. The number of characters to extract.
 
-export const subStrFN = (str, start, len) => str.substr(start, len)
+export const substrFN = (str, start, len) => str.substr(start, len)
