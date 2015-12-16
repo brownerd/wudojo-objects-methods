@@ -19,6 +19,7 @@ import {replaceFN, replacer} from '../js/strings/18-String.prototype.replace'
 import {searchFN} from '../js/strings/19-String.prototype.search'
 import {sliceFN} from '../js/strings/20-String.prototype.slice'
 import {splitFN} from '../js/strings/21-String.prototype.split'
+import {startsWithFN} from '../js/strings/22-String.prototype.startsWith'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -334,6 +335,22 @@ test('2 splitFN() should split string into an array at the identified splits for
   const expected = ['This', 'is', 'a', 'crazy', 'time']
   assert.deepEqual(actual, expected,
     `splitFN() should equal ${expected}`)
+  assert.end()
+})
+
+test('1 startsWithFN() function indicates if a searchTerm is at the beginning of a string', assert => {
+  const actual = startsWithFN('Oh Hell yeah!', 'Oh')
+  const expected = true
+  assert.equal(actual, expected,
+    `startsWithFN() is should return ${expected}`)
+  assert.end()
+})
+
+test('2 startsWithFN() function indicates if a searchTerm is at the beginning of a string', assert => {
+  const actual = startsWithFN('Oh Hell yeah!', 'Hell', 3)
+  const expected = true
+  assert.equal(actual, expected,
+    `startsWithFN() is should return ${expected}`)
   assert.end()
 })
 

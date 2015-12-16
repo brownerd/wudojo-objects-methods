@@ -22,7 +22,17 @@
 
 export const sliceFN = (str, beginSlice, endSlice) => str.slice(beginSlice, endSlice)
 
-
-
-
 // http://thenewcode.com/281/Manipulating-JavaScript-Strings-with-Split-and-Slice
+
+
+// I can't see a reason to use the substring() method. It appears to be a less-robust version of the slice() method. If you know the indices, use slice(); if you know the length, use substr().
+// http://www.bennadel.com/blog/2159-using-slice-substring-and-substr-in-javascript.htm
+
+/*
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function(searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+ */
