@@ -25,6 +25,7 @@ import {substringFN} from '../js/strings/24-String.prototype.substring'
 import {toLowerCaseFN} from '../js/strings/27-String.prototype.toLowerCase'
 import {toStringFN} from '../js/strings/28-String.prototype.toString'
 import {toUpperCaseFN} from '../js/strings/29-String.prototype.toUpperCase'
+import {trimFN} from '../js/strings/30-String.prototype.trim'
 
 // Length
 test('len() function should return length of the string', assert => {
@@ -396,6 +397,14 @@ test('toUpperCaseFN() will uppercase a string', assert => {
   const expected = 'RAD'
   assert.equal(actual, expected,
     `toUpperCaseFN should return ${expected}`)
+  assert.end()
+})
+
+test('trimFN() will remove white space from both ends of a string', assert => {
+  const actual = trimFN(' RAD ')
+  const expected = 'RAD'
+  assert.equal(actual, expected,
+    `trimFN() will remove white space from both ends of a string`)
   assert.end()
 })
 /*
