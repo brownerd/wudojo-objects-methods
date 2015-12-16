@@ -113,3 +113,8 @@ substr( 100, 1 ) :
 `npm run regexz -F 1`
 
 `npm run stringz -F 1`
+
+
+## Looking back
+
+I was psyched to get this set up and rolling, but it did become arduous to complete. Although I do feel drained, at least I have seen every thing. Now I have to be able to recall these and get good at using them.
