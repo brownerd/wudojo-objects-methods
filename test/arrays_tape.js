@@ -2,6 +2,8 @@ import test from 'tape'
 import {len} from '../js/arrays/01-Array.prototype.length'
 import {fromArgs, fromStr, fromDouble, fromSeqGen} from '../js/arrays/02-Array.from'
 import {isArrayFN} from '../js/arrays/03-Array.isArray'
+import {ofFN} from '../js/arrays/05-Array.of'
+import {concatFN} from '../js/arrays/06-Array.prototype.concat'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -56,6 +58,13 @@ test('2 isArrayFN() will test if a value IS an array', assert => {
   const expected = false
   assert.equal(actual, expected,
     `isArrayFN() should return ${expected}`)
+  assert.end()
+})
+
+test('ofFN() array maker', assert => {
+  const actual = ofFN(1, 'hello', 3)
+  const expected = [1, 'hello', 3]
+  assert.deepEqual(actual, expected, `ofFN() should make this array from args: ${expected}`)
   assert.end()
 })
 
