@@ -12,6 +12,12 @@ Just trying to learn about the standard built-in objects and their methods. I ha
 
 #### Arrays
 
+**Array.from()**
+[ECMAScript.next: Array.from() and Array.of()](http://www.2ality.com/2011/07/array-from.html)
+
+
+
+
 #### Date
 
 #### Dom
