@@ -1,6 +1,7 @@
 import test from 'tape'
 import {len} from '../js/arrays/01-Array.prototype.length'
 import {fromArgs, fromStr, fromDouble, fromSeqGen} from '../js/arrays/02-Array.from'
+import {isArrayFN} from '../js/arrays/03-Array.isArray'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -41,6 +42,23 @@ test('fromSeqGen() sequence generator', assert => {
     `fromSeqGen() generate a sequence of numbers: ${expected}`)
   assert.end()
 })
+
+test('1 isArrayFN() will test if a value IS an array', assert => {
+  const actual = isArrayFN([])
+  const expected = true
+  assert.equal(actual, expected,
+    `isArrayFN() should return ${expected}`)
+  assert.end()
+})
+
+test('2 isArrayFN() will test if a value IS an array', assert => {
+  const actual = isArrayFN('array')
+  const expected = false
+  assert.equal(actual, expected,
+    `isArrayFN() should return ${expected}`)
+  assert.end()
+})
+
 /*
 // For each unit test you write
 // answer these questions
