@@ -10,6 +10,7 @@ import {filterODD, filterEven, filterGreater} from '../js/arrays/11-Array.protot
 import {findGreater} from '../js/arrays/12-Array.prototype.find'
 import {findIndexFN} from '../js/arrays/13-Array.prototype.findIndex'
 import {forEachDoubleFN} from '../js/arrays/14-Array.prototype.forEach'
+import {includesFN} from '../js/arrays/15-Array.prototype.includes'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -144,13 +145,28 @@ test('findIndexFN() method returns an index in the array, if an element in the a
 })
 
 test('forEachDoubleFN() should double each item in the array', assert => {
-  const actual = forEachDoubleFN([1, 2, 3], dub)
+  const actual = forEachDoubleFN([1, 2, 3])
   const expected = [2, 4, 6]
   assert.deepEqual(actual, expected,
     `forEachDoubleFN() should double each item in the array ${expected}`)
   assert.end()
 })
 
+test('1 includesFN() tests if a value is in the array', assert=> {
+  const actual = includesFN([1, 2, 3, 'Hi'], 1)
+  const expected = true
+  assert.deepEquals(actual, expected,
+  `includesFN should be ${expected}`)
+  assert.end()
+})
+
+test('2 includesFN() tests if a value is in the specified index array', assert=> {
+  const actual = includesFN([1, 2, 3, 'Hi'], 1, 0)
+  const expected = true
+  assert.deepEquals(actual, expected,
+  `includesFN should be ${expected}`)
+  assert.end()
+})
 /*
 // For each unit test you write
 // answer these questions
