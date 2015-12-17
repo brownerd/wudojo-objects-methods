@@ -13,6 +13,7 @@ import {forEachDoubleFN} from '../js/arrays/14-Array.prototype.forEach'
 import {includesFN} from '../js/arrays/15-Array.prototype.includes'
 import {indexOfFN, indexOfMany, indexUpdater} from '../js/arrays/16-Array.prototype.indexOf'
 import {joinFN} from '../js/arrays/17-Array.prototype.join'
+import {lastIndexOfFN} from '../js/arrays/19-Array.prototype.lastIndexOf'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -218,6 +219,21 @@ test('joinFN() joins items in an array into a string', assert => {
   assert.end()
 })
 
+test('1 lastIndexOfFN() shows last index of searchElement', assert => {
+  const actual = lastIndexOfFN([2, 5, 9, 2], 2)
+  const expected = 3
+  assert.equal(actual, expected,
+    `Should be ${expected}`)
+  assert.end()
+})
+
+test('2 lastIndexOfFN() shows last index of searchElement', assert => {
+  const actual = lastIndexOfFN([2, 5, 9, 2], 2, 3)
+  const expected = 3
+  assert.equal(actual, expected,
+    `Should be ${expected}`)
+  assert.end()
+})
 /*
 // For each unit test you write
 // answer these questions
