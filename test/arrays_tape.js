@@ -14,6 +14,7 @@ import {includesFN} from '../js/arrays/15-Array.prototype.includes'
 import {indexOfFN, indexOfMany, indexUpdater} from '../js/arrays/16-Array.prototype.indexOf'
 import {joinFN} from '../js/arrays/17-Array.prototype.join'
 import {lastIndexOfFN} from '../js/arrays/19-Array.prototype.lastIndexOf'
+import {map1FN, add1, mapFN, typez} from '../js/arrays/20-Array.prototype.map'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -234,6 +235,28 @@ test('2 lastIndexOfFN() shows last index of searchElement', assert => {
     `Should be ${expected}`)
   assert.end()
 })
+
+test('1 map1FN() should map directions over each item in the array', assert => {
+  const actual = map1FN(['Rad', 'Awesome'])
+  const expected = ['Rad 1', 'Awesome 1']
+  assert.deepEqual(actual, expected, `Should be ${expected}`)
+  assert.end()
+})
+
+test('2 add1 mapFN() should map directions over each item in the array', assert => {
+  const actual = mapFN(['Rad', 'Awesome'], add1)
+  const expected = ['Rad 1', 'Awesome 1']
+  assert.deepEqual(actual, expected, `Should be ${expected}`)
+  assert.end()
+})
+
+test('3 typez mapFN() should map directions over each item in the array', assert => {
+  const actual = mapFN(['Rad', 'Awesome'], typez)
+  const expected = ['string', 'string']
+  assert.deepEqual(actual, expected, `Should be ${expected}`)
+  assert.end()
+})
+
 /*
 // For each unit test you write
 // answer these questions
