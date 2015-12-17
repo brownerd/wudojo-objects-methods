@@ -11,6 +11,7 @@ import {findGreater} from '../js/arrays/12-Array.prototype.find'
 import {findIndexFN} from '../js/arrays/13-Array.prototype.findIndex'
 import {forEachDoubleFN} from '../js/arrays/14-Array.prototype.forEach'
 import {includesFN} from '../js/arrays/15-Array.prototype.includes'
+import {indexOfFN, indexOfMany, indexUpdater} from '../js/arrays/16-Array.prototype.indexOf'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -167,6 +168,48 @@ test('2 includesFN() tests if a value is in the specified index array', assert=>
   `includesFN should be ${expected}`)
   assert.end()
 })
+
+test('3 includesFN() tests if a value is in the specified index array', assert=> {
+  const actual = includesFN([1, 2, 3, 'Hi'], 10)
+  const expected = false
+  assert.deepEquals(actual, expected,
+  `includesFN should be ${expected}`)
+  assert.end()
+})
+
+test('1 indexOfFN looks if value is at specified index', assert => {
+  const actual = indexOfFN([1, 2, 3, 'Hi'], 1)
+  const expected = 0
+  assert.equal(actual, expected,
+    `indexOfFN should be ${expected}`)
+  assert.end()
+})
+
+test('2 indexOfFN looks if value is at specified index', assert => {
+  const actual = indexOfFN([1, 2, 3, 'Hi'], 10)
+  const expected = -1
+  assert.equal(actual, expected,
+    `indexOfFN should be ${expected}`)
+  assert.end()
+})
+
+test('3 indexOfMany looks for multiple instances of a value in an array', assert => {
+  const actual = indexOfMany(['a', 'b', 'a', 'c', 'a', 'd'], 'a')
+  const expected = [0, 2, 4]
+  assert.deepEqual(actual, expected,
+    `indexOfMany should be ${expected}`)
+  assert.end()
+})
+
+test('3 indexUpdater() looks for multiple instances of a value in an array', assert => {
+  const actual = indexUpdater(['potato', 'tomato', 'chillies', 'green-pepper'], 'spinach')
+  const expected = ['potato', 'tomato', 'chillies', 'green-pepper', 'spinach']
+  assert.deepEqual(actual, expected,
+    `indexUpdater should be ${expected}`)
+  assert.end()
+})
+
+
 /*
 // For each unit test you write
 // answer these questions
