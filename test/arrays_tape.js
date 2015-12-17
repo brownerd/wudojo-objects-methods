@@ -12,6 +12,7 @@ import {findIndexFN} from '../js/arrays/13-Array.prototype.findIndex'
 import {forEachDoubleFN} from '../js/arrays/14-Array.prototype.forEach'
 import {includesFN} from '../js/arrays/15-Array.prototype.includes'
 import {indexOfFN, indexOfMany, indexUpdater} from '../js/arrays/16-Array.prototype.indexOf'
+import {joinFN} from '../js/arrays/17-Array.prototype.join'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -209,6 +210,13 @@ test('3 indexUpdater() looks for multiple instances of a value in an array', ass
   assert.end()
 })
 
+test('joinFN() joins items in an array into a string', assert => {
+  const actual = joinFN(['h', 'i', '!'], '')
+  const expected = 'hi!'
+  assert.equal(actual, expected,
+    `joinFN() should join the items into a string ${expected}`)
+  assert.end()
+})
 
 /*
 // For each unit test you write
