@@ -7,4 +7,4 @@ export const concaT = (str, str2) => str.concat(str2)
 
 // Performance
 
-// It is strongly recommended that assignment operators (+, +=) are used instead of the concat() method. 
+// It is strongly recommended that assignment operators (+, +=) are used instead of the concat() method.

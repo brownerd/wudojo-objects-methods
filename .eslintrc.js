@@ -107,7 +107,7 @@ module.exports = {
     "no-mixed-spaces-and-tabs": [2, false],
     "no-multi-spaces": [2],
     "no-multi-str": [2],
-    "no-multiple-empty-lines": [2, { "max": 2 }],
+    "no-multiple-empty-lines": [2, { "max": 5 }],
     "no-native-reassign": [1],
     "no-negated-in-lhs": [2],
     "no-nested-ternary": [0],

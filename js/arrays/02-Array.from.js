@@ -28,7 +28,6 @@ Description
 
 // ES6
 
-
 export function fromArgs () {
   return Array.from(arguments)
 }
@@ -38,12 +37,11 @@ export const fromStr = (str) => Array.from(str)
 
 // Using an arrow function as the map function to
 // manipulate the elements
-export const fromDouble = (arr) => Array.from(arr, x => x + x);
+export const fromDouble = (arr) => Array.from(arr, x => x + x)
 
 // Generate a sequence of numbers
 export const fromSeqGen = (lengthObj) =>
-  Array.from(lengthObj, (value, count) => count);
-
+  Array.from(lengthObj, (value, count) => count)
 
 // ECMAScript.next: Array.from() and Array.of()
 // http://www.2ality.com/2011/07/array-from.html
@@ -80,21 +78,11 @@ A simpler way to cast the args of a function to an array
     return [].slice.call(arguments)
   }
 
-
-
-
-
   The one thing you cannot do with either Array.from nor the spread operator is to pick a start index. Suppose you wanted to pull every <div> after the first one. With .slice.call, you could do it like so:
 
 [].slice.call(document.querySelectorAll('div'), 1)
 
-
-
-
-
 Of course, there’s nothing stopping you from using .slice after casting. This is probably way easier to read, and looks more like functional programming, so there’s that.
 
 Array.from(document.querySelectorAll('div')).slice(1)
-
-
 */

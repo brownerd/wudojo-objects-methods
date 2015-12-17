@@ -15,6 +15,7 @@ import {indexOfFN, indexOfMany, indexUpdater} from '../js/arrays/16-Array.protot
 import {joinFN} from '../js/arrays/17-Array.prototype.join'
 import {lastIndexOfFN} from '../js/arrays/19-Array.prototype.lastIndexOf'
 import {map1FN, add1, mapFN, typez} from '../js/arrays/20-Array.prototype.map'
+import {popFN} from '../js/arrays/21-Array.prototype.pop'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -254,6 +255,14 @@ test('3 typez mapFN() should map directions over each item in the array', assert
   const actual = mapFN(['Rad', 'Awesome'], typez)
   const expected = ['string', 'string']
   assert.deepEqual(actual, expected, `Should be ${expected}`)
+  assert.end()
+})
+
+test('popFN() removes last item from array', assert => {
+  const actual = popFN([1, 2, 3, 4])
+  const expected = 4
+  assert.equal(actual, expected,
+    `Should get last item in array ${expected}`)
   assert.end()
 })
 

@@ -16,4 +16,4 @@ Parameters
 
  */
 
-export const includesFN = (arr, searchElement, fromIndex) => arr.includes(searchElement, fromIndex) 
+export const includesFN = (arr, searchElement, fromIndex) => arr.includes(searchElement, fromIndex)

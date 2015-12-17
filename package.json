@@ -17,7 +17,7 @@
 
     "lintest": "watch 'clear && npm run -s lint && npm -s test' js test",
 
-    "lint": "eslint src test",
+    "lint": "eslint js test",
 
     "lister": "babel-node file-lister.js",
 

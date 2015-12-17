@@ -9,5 +9,4 @@ export const replaceFN = (str, regexp, newStr, orderString, fn) => str.replace(r
 // /([^\d]*)(\d*)([^\w]*)/
 // 'abc - 12345 - #$*%'
 
-export const replacer = (match, p1, p2, p3, offset, string) => 
-  [p1, p2, p3].join(' - ')
+export const replacer = (match, p1, p2, p3, offset, string) => [p1, p2, p3].join(' - ')

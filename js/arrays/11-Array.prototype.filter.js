@@ -6,10 +6,10 @@
 // filter() does not mutate the array on which it is called.
 
 // Filter to keep only Odd values
-export const filterODD = (arr) => arr.filter( item => item % 2 === 1)
+export const filterODD = (arr) => arr.filter(item => item % 2 === 1)
 
 // Filter to keep Even values
-export const filterEven = (arr) => arr.filter( item => item % 2 === 0)
+export const filterEven = (arr) => arr.filter(item => item % 2 === 0)
 
 // Folter to keep values greater than 3
-export const filterGreater = (arr, limit) => arr.filter( item => item > 3)
+export const filterGreater = (arr, limit) => arr.filter(item => item > limit)

@@ -20,8 +20,8 @@ export const minus1 = (x) => x - 1
 
 // Functor to increment or dercement each character in a string by 1
 export const stringFunctor = (x, fn) => {
-  const chars = x.split("")
-  return chars.map( char => {
+  const chars = x.split('')
+  return chars.map(char => {
    return String.fromCharCode(fn(char.charCodeAt(0)))
-  }).join("")
+ }).join('')
 }
