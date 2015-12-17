@@ -23,6 +23,11 @@ Each file in the JS directory IS largely (almost entirly) a copy of info from Mo
 **.every()**
 - [The Array native every(), filter(), map(), some(), forEach() methods](https://coderwall.com/p/_ggh2w/the-array-native-every-filter-map-some-foreach-methods) Super helpful
 
+**.forEach() and .map**
+- [Array.prototype.map() versus Array.prototype.forEach()](http://tiffanybbrown.com/2012/10/15/array-prototype-map-versus-array-prototype-foreach/)
+
+arrow functions are particularly useful in most functional programming situations such as when using .map, .filter, or .reduce on collections.
+
 
 #### Date
 

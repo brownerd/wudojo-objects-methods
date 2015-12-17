@@ -9,6 +9,7 @@ import {every10FN} from '../js/arrays/09-Array.prototype.every'
 import {filterODD, filterEven, filterGreater} from '../js/arrays/11-Array.prototype.filter'
 import {findGreater} from '../js/arrays/12-Array.prototype.find'
 import {findIndexFN} from '../js/arrays/13-Array.prototype.findIndex'
+import {forEachDoubleFN} from '../js/arrays/14-Array.prototype.forEach'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -142,6 +143,13 @@ test('findIndexFN() method returns an index in the array, if an element in the a
   assert.end()
 })
 
+test('forEachDoubleFN() should double each item in the array', assert => {
+  const actual = forEachDoubleFN([1, 2, 3], dub)
+  const expected = [2, 4, 6]
+  assert.deepEqual(actual, expected,
+    `forEachDoubleFN() should double each item in the array ${expected}`)
+  assert.end()
+})
 
 /*
 // For each unit test you write
