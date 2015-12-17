@@ -17,6 +17,7 @@ import {lastIndexOfFN} from '../js/arrays/19-Array.prototype.lastIndexOf'
 import {map1FN, add1, mapFN, typez} from '../js/arrays/20-Array.prototype.map'
 import {popFN} from '../js/arrays/21-Array.prototype.pop'
 import {pushFN} from '../js/arrays/22-Array.prototype.push'
+import {reduceFN, sumFN, arrayFN} from '../js/arrays/23-Array.prototype.reduce'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -275,6 +276,23 @@ test('pushFN() puts items at the end of a given array', assert => {
   assert.end()
 })
 
+// Find Sum
+test('reduceFN() sumFN reduces items in an array into a singular result', assert => {
+  const actual = reduceFN([1, 2, 3, 4], sumFN, 0)
+  const expected = 10
+  assert.equal(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+// Flatten multi-dimensional array
+test('reduceFN() arrayFN reduces items in an array into a singular result', assert => {
+  const actual = reduceFN([[1, 2], [3, 4]], arrayFN, [])
+  const expected = [1, 2, 3, 4]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
 /*
 // For each unit test you write
 // answer these questions
