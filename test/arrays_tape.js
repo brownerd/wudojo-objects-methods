@@ -16,6 +16,7 @@ import {joinFN} from '../js/arrays/17-Array.prototype.join'
 import {lastIndexOfFN} from '../js/arrays/19-Array.prototype.lastIndexOf'
 import {map1FN, add1, mapFN, typez} from '../js/arrays/20-Array.prototype.map'
 import {popFN} from '../js/arrays/21-Array.prototype.pop'
+import {pushFN} from '../js/arrays/22-Array.prototype.push'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -263,6 +264,14 @@ test('popFN() removes last item from array', assert => {
   const expected = 4
   assert.equal(actual, expected,
     `Should get last item in array ${expected}`)
+  assert.end()
+})
+
+test('pushFN() puts items at the end of a given array', assert => {
+  const actual = pushFN([1, 2, 3], 4, 5)
+  const expected = [1, 2, 3, 4, 5]
+  assert.deepEqual(actual, expected,
+    `Should be ${expected}`)
   assert.end()
 })
 
