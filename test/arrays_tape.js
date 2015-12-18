@@ -18,6 +18,7 @@ import {map1FN, add1, mapFN, typez} from '../js/arrays/20-Array.prototype.map'
 import {popFN} from '../js/arrays/21-Array.prototype.pop'
 import {pushFN} from '../js/arrays/22-Array.prototype.push'
 import {reduceFN, sumFN, arrayFN} from '../js/arrays/23-Array.prototype.reduce'
+import {reverseFN} from '../js/arrays/25-Array.prototype.reverse'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -291,6 +292,14 @@ test('reduceFN() arrayFN reduces items in an array into a singular result', asse
   const expected = [1, 2, 3, 4]
   assert.deepEqual(actual, expected,
     `Should return ${expected}`)
+  assert.end()
+})
+
+test('reverseFN() reverses an array', assert => {
+  const actual = reverseFN([1, 2, 3])
+  const expected = [3, 2, 1]
+  assert.deepEqual(actual, expected,
+    `Array should be in reverse order ${expected}`)
   assert.end()
 })
 /*
