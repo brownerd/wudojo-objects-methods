@@ -23,6 +23,7 @@ import {shiftFN} from '../js/arrays/26-Array.prototype.shift'
 import {sliceFN} from '../js/arrays/27-Array.prototype.slice'
 import {someFN, largerFN} from '../js/arrays/28-Array.prototype.some'
 import {sortFN, upFN, downFN} from '../js/arrays/29-Array.prototype.sort'
+import {spliceFN} from '../js/arrays/30-Array.prototype.splice'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -358,6 +359,14 @@ test('3 sortFN() will sort the items in the array from smallest to largest', ass
 test('4 sortFN() will sort the items in the array from smallest to largest', assert => {
   const actual = sortFN([2, 4, 5, 1, 3], upFN)
   const expected = [5, 4, 3, 2, 1]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('spliceFN() will splice', assert => {
+  const actual = spliceFN([1, 2, 3, 4, 5], 2, 1)
+  const expected = [1, 2, 4, 5]
   assert.deepEqual(actual, expected,
     `Should return ${expected}`)
   assert.end()
