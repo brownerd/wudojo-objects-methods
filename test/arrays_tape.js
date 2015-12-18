@@ -20,6 +20,7 @@ import {pushFN} from '../js/arrays/22-Array.prototype.push'
 import {reduceFN, sumFN, arrayFN} from '../js/arrays/23-Array.prototype.reduce'
 import {reverseFN} from '../js/arrays/25-Array.prototype.reverse'
 import {shiftFN} from '../js/arrays/26-Array.prototype.shift'
+import {sliceFN} from '../js/arrays/27-Array.prototype.slice'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -307,6 +308,14 @@ test('reverseFN() reverses an array', assert => {
 test('shiftFN() will remove the first item from the array', assert => {
   const actual = shiftFN([1, 2, 3])
   const expected = [2, 3]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('sliceFN pulls out a mini array from a larger array', assert => {
+  const actual = sliceFN([1, 2, 3, 4, 5], 2, -1)
+  const expected = [3, 4]
   assert.deepEqual(actual, expected,
     `Should return ${expected}`)
   assert.end()
