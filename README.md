@@ -31,6 +31,8 @@ arrow functions are particularly useful in most functional programming situation
 
 #### Date
 
+I didn't do all of these. Just making notes on the basics from this section
+
 getDate - returns integer between 1 - 31
 getDay - returns integer between 0 - 6
 getFullYear - returns the year
@@ -40,9 +42,74 @@ getMinutes - returns an integer between 0 and 59
 getMonth - returns an integer between 0 and 11
 getSeconds - returns an integer between 0 and 59
 
+toDateString - human readable date
+toTimeString - human readable time
+toString - human readable date, time, timezone. returns a string representing the specified Date object
+
 #### Dom
 
 #### Functions
+
+Apply and Call
+
+So .call and .apply allow you to manipulate the this keyword for the invoked function.
+
+```js
+function printer(message) {
+    console.log(message)
+}
+
+printer.call({}, "hello")
+printer.apply({}, ["world!"])
+//hello
+//world!
+
+
+
+function Person(name){
+    this.name = name;
+    this.introduceSelf = function() {
+        console.log("Hello, my name is " + this.name);
+    }
+}
+
+var alice = new Person('Alice');
+alice.introduceSelf();
+
+alice.introduceSelf.call({name: "Bob"});
+alice.introduceSelf.apply({name: "Casey"});
+//Hello, my name is Alice
+//Hello, my name is Bob
+//Hello, my name is Casey
+
+
+
+
+function Person(name){
+    this.name = name;
+    this.introduceSelf = function(greeting) {
+        console.log(greeting + ", my name is " + this.name);
+    }
+}
+
+var alice = new Person('Alice');
+alice.introduceSelf('Hello');
+// logs "Hello, my name is Alice", as expected
+
+alice.introduceSelf.call({name: "Bob"}, 'Bonjour');
+// logs "Bonjour, my name is Bob"
+
+alice.introduceSelf.apply({name: "Casey"}, ['Hola']);
+// logs "Hola, my name is Casey"
+
+// For .call you pass the parameters comma separated (like normal). For .apply you pass the parameters in an array.
+```
+That’s a fair question. But the two methods have different use cases. If you know exactly how many arguments you're passing, you should use .call. If you don’t know, or if your arguments are already in an array, you should use .apply.
+
+
+
+
+
 
 #### JSON
 

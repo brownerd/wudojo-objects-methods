@@ -5,6 +5,7 @@ import {getDateFN} from '../js/date/04-Date.prototype.getDate'
 import {getDayFN} from '../js/date/05-Date.prototype.getDay'
 import {getFullYearFN} from '../js/date/06-Date.prototype.getFullYear'
 import {getTimeFN} from '../js/date/12-Date.prototype.getTime'
+import {toDateStringFN} from '../js/date/37-Date.prototype.toDateString'
 
 test('dateUTCFN()', assert => {
   const actual = dateUTCFN(96, 11, 1, 0, 0, 0)
@@ -55,6 +56,15 @@ test('getTimeFN() get the year out of the specified date', assert => {
   const actual = getTimeFN('Aug, 10, 2015')
   // This is only expected for this year
   const expected = 1439182800000
+  assert.equal(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('toDateStringFN() get the year out of the specified date', assert => {
+  const actual = toDateStringFN(1993, 6, 28)
+  // This is only expected for this year
+  const expected = 'Wed Jul 28 1993'
   assert.equal(actual, expected,
     `Should return ${expected}`)
   assert.end()
