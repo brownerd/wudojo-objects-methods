@@ -31,6 +31,15 @@ arrow functions are particularly useful in most functional programming situation
 
 #### Date
 
+getDate - returns integer between 1 - 31
+getDay - returns integer between 0 - 6
+getFullYear - returns the year
+getHours - returns an integer between 0 and 23
+getMilliseconds - returns a number between 0 and 999
+getMinutes - returns an integer between 0 and 59
+getMonth - returns an integer between 0 and 11
+getSeconds - returns an integer between 0 and 59
+
 #### Dom
 
 #### Functions
