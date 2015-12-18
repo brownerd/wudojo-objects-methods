@@ -19,6 +19,7 @@ import {popFN} from '../js/arrays/21-Array.prototype.pop'
 import {pushFN} from '../js/arrays/22-Array.prototype.push'
 import {reduceFN, sumFN, arrayFN} from '../js/arrays/23-Array.prototype.reduce'
 import {reverseFN} from '../js/arrays/25-Array.prototype.reverse'
+import {shiftFN} from '../js/arrays/26-Array.prototype.shift'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -300,6 +301,14 @@ test('reverseFN() reverses an array', assert => {
   const expected = [3, 2, 1]
   assert.deepEqual(actual, expected,
     `Array should be in reverse order ${expected}`)
+  assert.end()
+})
+
+test('shiftFN() will remove the first item from the array', assert => {
+  const actual = shiftFN([1, 2, 3])
+  const expected = [2, 3]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
   assert.end()
 })
 /*
