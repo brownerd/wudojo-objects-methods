@@ -22,6 +22,7 @@ import {reverseFN} from '../js/arrays/25-Array.prototype.reverse'
 import {shiftFN} from '../js/arrays/26-Array.prototype.shift'
 import {sliceFN} from '../js/arrays/27-Array.prototype.slice'
 import {someFN, largerFN} from '../js/arrays/28-Array.prototype.some'
+import {sortFN, upFN, downFN} from '../js/arrays/29-Array.prototype.sort'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -326,6 +327,38 @@ test('someFN() return true if any are true', assert => {
   const actual = someFN([2, 4, 10, 5, 28], largerFN)
   const expected = true
   assert.equal(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('1 sortFN() will sort the items in the array from smallest to largest', assert => {
+  const actual = sortFN([2, 4, 5, 1, 3])
+  const expected = [1, 2, 3, 4, 5]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('2 sortFN() will sort the items in the array from smallest to largest', assert => {
+  const actual = sortFN(['Blue', 'Humpback', 'Beluga'])
+  const expected = ['Beluga', 'Blue', 'Humpback']
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('3 sortFN() will sort the items in the array from smallest to largest', assert => {
+  const actual = sortFN([2, 4, 5, 1, 3], downFN)
+  const expected = [1, 2, 3, 4, 5]
+  assert.deepEqual(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
+test('4 sortFN() will sort the items in the array from smallest to largest', assert => {
+  const actual = sortFN([2, 4, 5, 1, 3], upFN)
+  const expected = [5, 4, 3, 2, 1]
+  assert.deepEqual(actual, expected,
     `Should return ${expected}`)
   assert.end()
 })
