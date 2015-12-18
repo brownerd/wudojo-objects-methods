@@ -21,6 +21,7 @@ import {reduceFN, sumFN, arrayFN} from '../js/arrays/23-Array.prototype.reduce'
 import {reverseFN} from '../js/arrays/25-Array.prototype.reverse'
 import {shiftFN} from '../js/arrays/26-Array.prototype.shift'
 import {sliceFN} from '../js/arrays/27-Array.prototype.slice'
+import {someFN, largerFN} from '../js/arrays/28-Array.prototype.some'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -320,6 +321,15 @@ test('sliceFN pulls out a mini array from a larger array', assert => {
     `Should return ${expected}`)
   assert.end()
 })
+
+test('someFN() return true if any are true', assert => {
+  const actual = someFN([2, 4, 10, 5, 28], largerFN)
+  const expected = true
+  assert.equal(actual, expected,
+    `Should return ${expected}`)
+  assert.end()
+})
+
 /*
 // For each unit test you write
 // answer these questions
