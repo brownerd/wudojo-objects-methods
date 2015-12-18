@@ -24,6 +24,8 @@ import {sliceFN} from '../js/arrays/27-Array.prototype.slice'
 import {someFN, largerFN} from '../js/arrays/28-Array.prototype.some'
 import {sortFN, upFN, downFN} from '../js/arrays/29-Array.prototype.sort'
 import {spliceFN} from '../js/arrays/30-Array.prototype.splice'
+import {toStringFN} from '../js/arrays/33-Array.prototype.toString'
+//import {unshiftFN} from '../js/arrays/34-Array.prototype.unshift'
 
 test('len() function returns correct length of array', assert => {
   const actual = len([1, 2, 3])
@@ -372,6 +374,13 @@ test('spliceFN() will splice', assert => {
   assert.end()
 })
 
+test('toStringFN() return a string value of the items in an array', assert => {
+  const actual = toStringFN([1, 2])
+  const expected = '1,2'
+  assert.equal(actual, expected,
+    `Should be ${expected}`)
+  assert.end()
+})
 /*
 // For each unit test you write
 // answer these questions
